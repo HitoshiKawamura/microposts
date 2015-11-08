@@ -20,6 +20,12 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.edit
+    if @user.save
+      flash[:success] = "Update your profile!"
+      redirect_to @user
+    else
+      render 'new'
+    end
   end
   
   private
