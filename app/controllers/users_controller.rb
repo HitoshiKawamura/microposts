@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:update]
+  before_action :set_user, only: [:edit, :update]
   def show #追加
     @user = User.find(params[:id])
   end
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
   
   def edit
-    @user = User.new
+    @user = User.find(params[:id])
   end
   
   def set_user
