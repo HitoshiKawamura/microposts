@@ -2,3 +2,33 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>名前</th>
+        <th><%= @user.name %></th>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <th><%= @user.email %></th>
+      </tr>
+      <tr>
+        <th>地域</th>
+        <th><%= @user.area %></th>
+      </tr>
+      <tr>
+        <th>プロフィール</th>
+        <th><%= @user.profile %></th>
+      </tr>
+    </tbody>
+  </table>
+</div>
