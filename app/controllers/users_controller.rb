@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :show]
-  def show #追加
-    @user = User.find(params[:id])
+  
+  def show
   end
   
   def new
@@ -19,11 +19,9 @@ class UsersController < ApplicationController
   end
   
   def edit
-    @user = User.find(params[:id])
   end
   
   def update
-    @user = User.find(params[:id])
     if @user.update(user_params)
       flash[:success] = "update your profile!"
       redirect_to @user
