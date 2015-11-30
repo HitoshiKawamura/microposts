@@ -1,4 +1,8 @@
-<li id="user-<%= user.id %>">
-  <%= link_to gravatar_for(user, size: 50), user %>
-  <span class="followings"><%= link_to user.name, user.name %></span>
-</li>
+<table border="3" bordercolor="white">
+  <tr>
+  <td><li id="user-<%= user.id %>">
+  <td><%= link_to gravatar_for(user, size: 50), user %></td>
+  <td><span class="followings"><%= link_to user.name, user %></span><td>
+  </li></td>
+  </tr>
+</table>
